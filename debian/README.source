@@ -1,0 +1,7 @@
+optipng_0.7.5.orig.tar.bz2 is a stripped version of the original OptiPNG.
+The following dirs and files were removed:
+
+src/libpng/
+src/zlib/
+
+ -- Emmanuel Bouthenot <kolter@debian.org>  Wed, 11 Jun 2014 00:08:51 +0200

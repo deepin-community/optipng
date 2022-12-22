@@ -1,0 +1,17 @@
+Description: Fix typos in manpage
+Author: Emmanuel Bouthenot <kolter@debian.org>
+Forwarded: not-needed
+Last-Update: 2016-04-08
+---
+This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
+--- a/src/optipng/man/optipng.1
++++ b/src/optipng/man/optipng.1
+@@ -276,7 +276,7 @@
+ incurred by repeated IDAT headers and CRCs.
+ .TP 4
+ 4.
+-Set the zlib window size inside IDAT to a mininum that does not affect the
++Set the zlib window size inside IDAT to a minimum that does not affect the
+ compression ratio, reducing the memory requirements of PNG decoders.
+ .P
+ Not all of the above steps need to be executed. The behavior depends on the

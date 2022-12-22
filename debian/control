@@ -1,0 +1,27 @@
+Source: optipng
+Section: graphics
+Priority: optional
+Maintainer: Debian PhotoTools Maintainers <pkg-phototools-devel@lists.alioth.debian.org>
+Uploaders:
+    Emmanuel Bouthenot <kolter@debian.org>
+Build-Depends:
+    debhelper (>= 13),
+    debhelper-compat (= 13),
+    zlib1g-dev,
+    libpng-dev
+Standards-Version: 4.6.0.1
+Rules-Requires-Root: no
+Homepage: http://optipng.sourceforge.net/
+Vcs-Git: https://salsa.debian.org/debian-phototools-team/optipng.git
+Vcs-Browser: https://salsa.debian.org/debian-phototools-team/optipng
+
+Package: optipng
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: advanced PNG (Portable Network Graphics) optimizer
+ OptiPNG is a PNG optimizer that recompresses the image files to a smaller
+ size. It losslessly reduces the bit depth, the color type and the color
+ palette of the image, runs a suite of compression methods and strategies,
+ and selects the compression parameters that yield the smallest output file.
+ It also recognizes several external file formats like BMP, GIF, TIFF and
+ PNM (PBM, PGM, PPM).

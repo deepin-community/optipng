@@ -1,0 +1,12 @@
+#!/usr/bin/make -f
+
+export DEB_BUILD_MAINT_OPTIONS=hardening=+all
+
+override_dh_auto_configure:
+	./configure -prefix=/usr -mandir=/usr/share/man -with-system-libs
+
+override_dh_installchangelogs:
+	dh_installchangelogs -k
+
+%:
+	dh $@

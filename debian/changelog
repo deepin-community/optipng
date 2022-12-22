@@ -1,0 +1,186 @@
+optipng (0.7.7-2) unstable; urgency=medium
+
+  * Switch debian/watch to version 4
+  * Update debian/upstream/metadata
+    - Remove useless HomePage field
+    - Add Repository and Repository-Browse fields
+  * Switch debhelper compatibility to 13
+  * Bump Standards-Version to 4.6.0.1
+  * Set Rules-Requires-Root to no
+  * Remove Nelson A. de Oliveira <naoliv@debian.org> from Uploaders
+    (Closes: #962112)
+
+ -- Emmanuel Bouthenot <kolter@debian.org>  Sat, 11 Sep 2021 21:17:21 +0000
+
+optipng (0.7.7-1) unstable; urgency=medium
+
+  * New upstream release
+  * Update Vcs-Git and Vcs-Browser with new repository on salsa.debian.org
+  * Fix debian/copyright Format URI to use https
+  * Switch debhelper compatibility to 12
+  * Bump Standards-Version to 4.3.0
+  * Add debian/upstream/metadata
+
+ -- Emmanuel Bouthenot <kolter@debian.org>  Sat, 16 Feb 2019 01:14:15 +0000
+
+optipng (0.7.6-1.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Prevent integer overflow in minitiff_read_info() (CVE-2017-1000229)
+    (Closes: #882032)
+  * gifread: Detect indirect circular dependencies in LZW tables
+    (CVE-2017-16938) (Closes: #878839)
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Thu, 07 Dec 2017 20:43:29 +0100
+
+optipng (0.7.6-1) unstable; urgency=medium
+
+  * New upstream release
+    - fix CVE-2016-2191: Invalid write while processing delta escapes
+      without any boundary checking (Closes: #820068)
+    - fix CVE-2015-7802: Buffer overflow in global memory (Closes: #801700)
+  * Enable hardening=+all build
+  * Fix Vcs-(Git|Browser) fields to use secure URIs
+  * Bump Standards-Version to 3.9.7
+  * Add a patch to fix typo in manpage
+
+ -- Emmanuel Bouthenot <kolter@debian.org>  Fri, 08 Apr 2016 23:13:38 +0200
+
+optipng (0.7.5-1) unstable; urgency=medium
+
+  * New upstream release (Closes: #687770)
+  * Bump Standards-Version to 3.9.5
+  * Build-Depends on libpng-dev instead of libpng12-dev (Closes: #662457)
+  * Switch to debhelper >= 9
+  * Add Vcs-* fields
+  * Set Debian PhotoTools as maintainer and add myself to Uploaders
+  * Enable test suite
+  * Update debian/README.source according the last change in sources
+  * Switch debian/copyright to DEP5 format
+  * Switch from CDBS to full debhelper
+  * Install optipng-check tool in examples directory (Closes: #602091)
+
+ -- Emmanuel Bouthenot <kolter@debian.org>  Wed, 11 Jun 2014 13:48:40 +0200
+
+optipng (0.6.4-1) unstable; urgency=low
+
+  * New upstream release;
+  * Convert package to the new format 3.0 (quilt);
+  * Register OptiPNG's manual.pdf in doc-base;
+  * Updated Standards-Version to 3.8.4 (no changes needed).
+
+ -- Nelson A. de Oliveira <naoliv@debian.org>  Wed, 17 Mar 2010 12:26:17 -0300
+
+optipng (0.6.3-1) unstable; urgency=low
+
+  * New upstream release;
+  * Updated Standards-Version to 3.8.3 (no changes needed).
+
+ -- Nelson A. de Oliveira <naoliv@debian.org>  Tue, 18 Aug 2009 17:14:28 -0300
+
+optipng (0.6.2.1-1) unstable; urgency=high
+
+  * New upstream release:
+    - Fix an array overflow vulnerability.
+
+ -- Nelson A. de Oliveira <naoliv@debian.org>  Thu, 26 Feb 2009 15:48:25 -0300
+
+optipng (0.6.2-1) experimental; urgency=low
+
+  * New upstream release;
+  * Fix broken link /usr/share/doc/optipng/changelog.gz;
+  * OptiPNG now produces a less verbose output (Closes: #457772).
+
+ -- Nelson A. de Oliveira <naoliv@debian.org>  Tue, 11 Nov 2008 13:26:52 -0200
+
+optipng (0.6.1-2) unstable; urgency=low
+
+  * Update debian/copyright.
+
+ -- Nelson A. de Oliveira <naoliv@debian.org>  Sat, 26 Jul 2008 19:14:00 -0300
+
+optipng (0.6.1-1) unstable; urgency=low
+
+  * New upstream release;
+  * OptiPNG no longer writes a larger image (Closes: #491619);
+  * Removed patches/optipng-0.6.0.1.diff (fixed upstream);
+  * Updated debian/rules for the new build system.
+
+ -- Nelson A. de Oliveira <naoliv@debian.org>  Sat, 26 Jul 2008 18:51:23 -0300
+
+optipng (0.6-1) unstable; urgency=low
+
+  * New upstream release;
+  * Fix resolution change when optimizing files (Closes: #446920);
+  * Bump Standards-Version to 3.8.0 (no changes needed);
+  * Moved homepage from long description to its own field;
+  * New patch patches/optipng-0.6.0.1.diff, fixing the build system.
+
+ -- Nelson A. de Oliveira <naoliv@debian.org>  Fri, 20 Jun 2008 00:43:42 -0300
+
+optipng (0.5.5-1) unstable; urgency=medium
+
+  * New upstream release;
+  * Removed patches/opngreduc.patch (applied upstream);
+  * Medium urgency since it's basically a bug-fix release.
+
+ -- Nelson A. de Oliveira <naoliv@debian.org>  Sat,  3 Feb 2007 13:35:43 -0200
+
+optipng (0.5.4+0-1) unstable; urgency=medium
+
+  * New maintainer address;
+  * Stripped unneeded libpng, zlib and some other files from .orig.tar.gz;
+  * New patch debian/patches/opngreduc.patch to avoid OptiPNG failing with
+    some true-color RGB images;
+  * Added tags on debian/control;
+  * Medium urgency to get it on Etch.
+
+ -- Nelson A. de Oliveira <naoliv@debian.org>  Wed,  6 Dec 2006 02:32:02 -0200
+
+optipng (0.5.4-2) unstable; urgency=medium
+
+  * libpng version 1.2.13 available on Debian:
+    - OptiPNG is now dynamically linked against Debian's libpng;
+    - Updated debian/control (included build-depends on libpng12-dev);
+    - Updated debian/rules (now using "unix-secure.mak" to compile dynamically
+      against zlib and libpng);
+    - Removed debian/patches/* (not needed anymore);
+    - Removed README.Debian (it's not necessary anymore to explain why we are
+      linking OptiPNG statically with libpng).
+    - medium urgency since it will be really good to have this package on
+      Etch, using Debian's libpng instead its own (less security work, etc).
+
+ -- Nelson A. de Oliveira <naoliv@gmail.com>  Sun, 19 Nov 2006 02:14:06 -0200
+
+optipng (0.5.4-1) unstable; urgency=low
+
+  * New upstream release;
+  * New patch debian/patches/gcc.mak.patch to build OptiPNG dynamically
+    linked against zlib.
+
+ -- Nelson A. de Oliveira <naoliv@gmail.com>  Sat, 12 Aug 2006 03:22:18 -0300
+
+optipng (0.5.3-1) unstable; urgency=low
+
+  * New upstream release;
+  * debian/control: updated OptiPNG homepage;
+  * Removed patches debian/patches/optipng.1.patch and
+    debian/patches/optipng.c.patch (both applied upstream).
+
+ -- Nelson A. de Oliveira <naoliv@gmail.com>  Thu, 27 Jul 2006 01:12:41 -0300
+
+optipng (0.5.2-1) unstable; urgency=low
+
+  * New upstream release (Closes: #374079);
+  * Bumped Standards-Version to 3.7.2 (no changes needed);
+  * Updated watch file;
+  * .bak files aren't deleted anymore (Closes: #357487);
+  * Fixed "cummulative" typo (Closes: #355817).
+
+ -- Nelson A. de Oliveira <naoliv@gmail.com>  Sat, 17 Jun 2006 16:33:57 -0300
+
+optipng (0.5-1) unstable; urgency=low
+
+  * Initial release (Closes: #347993).
+
+ -- Nelson A. de Oliveira <naoliv@gmail.com>  Tue, 24 Jan 2006 12:32:55 -0200
